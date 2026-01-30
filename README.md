@@ -1,147 +1,103 @@
 
-Active Directory Security Lab (Windows Server 2022)
-📌 Project Overview
+# Active Directory Security Lab
 
-This project demonstrates the deployment, configuration, and security-focused management of an enterprise Active Directory (AD) environment using Windows Server 2022.
-The lab simulates a real-world organizational domain to showcase identity and access management (IAM) concepts, user administration, and foundational security best practices relevant to SOC and cybersecurity roles.
+## Overview
+This project demonstrates the design, deployment, and security hardening of an on-premises Active Directory (AD) environment using **Windows Server 2022**.  
+The lab focuses on **identity and access management (IAM)**, **role-based access control (RBAC)**, and **enterprise security best practices** commonly used in corporate networks.
 
-🏗️ Lab Environment
+---
 
-Hypervisor: VMware Workstation
+## Lab Environment
 
-Domain Controller: Windows Server 2022
+- **Hypervisor:** VMware Workstation 17 Player  
+- **Domain Controller:** Windows Server 2022  
+- **Domain Name:** tomvis.com  
+- **Client Systems:** Windows 11, Ubuntu (lab machines)  
 
-Domain Name: tomvis.com
+---
 
-Directory Service: Active Directory Domain Services (AD DS)
+## Objectives
 
-Client System: Windows 11 (prepared for domain integration)
+- Deploy and configure Active Directory Domain Services (AD DS)
+- Create and manage domain users and groups
+- Implement Organizational Units (OUs) for structured administration
+- Apply Role-Based Access Control (RBAC)
+- Enforce identity and access management best practices
+- Prepare the environment for monitoring and security expansion
 
-🎯 Project Objectives
+---
 
-Deploy and configure an Active Directory Domain Controller
+## Skills Demonstrated
 
-Create and manage domain users and security groups
+- Active Directory Domain Services (AD DS)
+- Windows Server 2022 Administration
+- User and Group Management
+- Organizational Units (OU) Design
+- Role-Based Access Control (RBAC)
+- Identity and Access Management (IAM)
+- Security Group Management
+- Domain Controller Configuration
+- Basic Active Directory Security Hardening
 
-Implement Organizational Units (OUs) for structured administration
+---
 
-Apply role-based access control (RBAC) principles
+## Lab Walkthrough (Screenshots)
 
-Build a foundation for authentication monitoring and SOC analysis
+### 1. Domain Controller Configuration
+Shows the configured Windows Server acting as the domain controller.
+![Domain Controller Info](screenshots/01-domain-controller-info.png)
 
-🛠️ Implementation Details
-1️⃣ Domain Controller Setup
+---
 
-Installed Active Directory Domain Services (AD DS)
+### 2. Active Directory Domain Structure
+Illustrates the AD domain tree for **tomvis.com**.
+![AD Domain Tree](screenshots/02-ad-domain-tree.png)
 
-Promoted Windows Server 2022 to a Domain Controller
+---
 
-Created a new forest and domain: tomvis.com
+### 3. Domain Users
+Displays created domain users with proper naming and role separation.
+![Domain Users](screenshots/03-domain-users.png)
 
-📸 Domain Controller Information
+---
 
+### 4. User Roles and Permissions
+Demonstrates role assignment and access control configuration.
+![User Role Details](screenshots/04-user-role-details.png)
 
-2️⃣ Active Directory Domain Structure
+---
 
-Verified Active Directory and DNS integration
+### 5. Security Groups
+Shows security groups used to enforce RBAC and least-privilege access.
+![Security Groups](screenshots/05-security-groups.png)
 
-Confirmed proper domain hierarchy and components
+---
 
-📸 Active Directory Domain Tree
+### 6. Organizational Units (OUs)
+Logical OU structure for users, computers, and administrators.
+![Organizational Units](screenshots/06-organizational-units.png)
 
+---
 
-3️⃣ Domain Users Management
+## Security Considerations
 
-Created multiple domain user accounts
+- Least privilege enforced using security groups
+- Separation of administrative and standard user accounts
+- Logical OU structure to support Group Policy application
+- Designed as a foundation for SIEM integration and monitoring
 
-Assigned users based on organizational roles
+---
 
-Prepared environment for authentication and access testing
+## Future Improvements
 
-📸 Domain Users
+- Group Policy Objects (GPO) enforcement
+- Active Directory auditing and logging
+- SIEM integration (Splunk / Wazuh)
+- Detection of misconfigurations and privilege abuse
 
+---
 
-4️⃣ User Roles & Permissions
+## Author
 
-Differentiated standard users from privileged accounts
-
-Applied group-based access control for scalability and security
-
-📸 User Role Details
-
-
-5️⃣ Security Groups Configuration
-
-Utilized built-in and custom security groups
-
-Followed least-privilege principles
-
-Avoided direct user permission assignments
-
-📸 Security Groups
-
-
-6️⃣ Organizational Units (OUs)
-
-Created Organizational Units to logically separate users and resources
-
-Improved manageability and readiness for Group Policy enforcement
-
-📸 Organizational Units
-
-
-7️⃣ Domain Controllers OU
-
-Verified Domain Controllers are correctly placed in the dedicated OU
-
-Ensured compliance with AD best practices
-
-📸 Domain Controllers OU
-
-
-8️⃣ Server Manager & AD Tools
-
-Managed AD roles and services via Server Manager
-
-Used Active Directory Users and Computers (ADUC) for administration
-
-📸 Server Manager – AD DS Installed
-
-
-🔐 Security Focus & Best Practices
-
-Role-Based Access Control (RBAC)
-
-Separation of administrative and standard user accounts
-
-Group-based permission management
-
-Structured OU design for enterprise scalability
-
-Secure identity management fundamentals
-
-🧠 Skills Demonstrated
-
-Active Directory administration
-
-Identity & Access Management (IAM)
-
-Windows Server 2022 configuration
-
-User and group management
-
-Enterprise security concepts
-
-Technical documentation
-
-🚀 Future Enhancements
-
-Group Policy Object (GPO) hardening
-
-Password and account lockout policies
-
-Authentication log monitoring
-
-SIEM integration (Splunk / Wazuh)
-
-Detection of suspicious login behavior
+**Alain Houantome**  
+Cybersecurity | SOC | Cloud | Linux  
